@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+          border: 1px solid black;
+          width:  300px;
+          height: 250px;
+       border-radius: 3px;
+     
+     
+
+          
+        }
+        input{
+             margin-left: 30px; 
+            margin-top: 30px;
+            width: 200px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        button{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            margin-left: 90px;
+            margin-top: 30px;
+        }
+        h1 {
+            font-size: 30px;
+            margin-left: 60px;
+           
+        }
+        
+        #name{
+            margin-left: 60px;
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1> BMI  Calcuate</h1>
+   <div>
+    <input type="number" placeholder="Enter weight in kg" id="weight">
+    <br>
+    <input type="number" placeholder="Enter height in Meters" id="height">
+    <button onclick="myfunction()"> Calcuate BMI </button>
+    <p id="name"></p>
+   </div>
+   
+
+   <script>
+    function myfunction() {
+       let weight  = document.getElementById('weight').value;
+      let height = document.getElementById('height').value;
+       if (weight > 0 && height > 0) {
+       
+        let BMI = weight / (height * height);
+        document.getElementById('name').innerHTML = 'Your BMI is:' + BMI
+       }else {
+            document.getElementById('name').innerHTML = 'enter a correct weight and height';
+        }
+    }
+ 
+   </script>
+</body>
+</html>
